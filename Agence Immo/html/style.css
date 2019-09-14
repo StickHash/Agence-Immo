@@ -1,0 +1,283 @@
+html
+{
+	height: 100%;
+}
+body
+{
+	height: 100%;
+	margin: 0px;
+	padding:0px;
+	background-image: url("architecture.jpg");
+	text-align: left;
+	color: white;
+    font-family: "Courier";
+}
+.global
+{
+	min-height: 100%;
+	position: relative;
+}
+.content
+{
+	padding-bottom: 50px;
+	margin: 10px;
+}
+header
+{
+	background-image: url("grisfonce.jpg");
+	text-align: center;
+	padding: 10px;
+	margin: 10px 0px 10px 0px;
+	border-width: 6px;
+    border-style: groove;
+    border-color: ghostwhite;
+}
+footer
+{
+	background: gray;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin-top: 50px;
+	height: 50px;
+}
+h1
+{
+	font-size: 38px;
+	letter-spacing: 4px;
+	text-shadow: 4px -3px 2px black;
+}
+h3
+{
+	text-align: center;
+}
+a
+{
+	color: ghostwhite;
+}
+aside
+{
+	border-style: ridge;
+	border-width: 4px;
+	background-color: grey;
+	right: 20px;
+	width: 300px;
+	margin-top: 15px;
+	position: fixed;
+}
+table, th, td
+{
+	background-color: lightgray;
+	border: 1px solid gray;
+	color: dimGray;
+}
+
+th 
+{
+  height: 30px;
+  padding-left: 2px;
+}
+td
+{
+	width: 120px;
+}
+
+nav > ul > li
+{
+	float: left;
+	position: relative;
+}
+nav  li
+{
+	list-style-type: none;
+}
+nav > ul
+{
+	margin: 0px;
+	padding: 0px;
+}
+nav
+{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+	background-color: grey;
+}
+nav > ul::after
+{
+	content: "";
+	display: block;
+	clear: both;
+}
+nav a
+{
+	display: inline-block;
+	text-decoration: none;
+}	
+nav > ul > li > a
+{
+	padding: 10px 40px;
+	color: lightgray;
+}
+article
+{
+	background-color: dimgray;
+	border-width: 2px;
+    border-style: groove;
+    border-color: ghostwhite;
+	margin: 15px;
+	padding: 10px;
+	/* overflow: auto; */
+	display: inline-block;
+}
+section
+{
+	display:flex;
+}
+img
+{
+	margin: 10px;
+}
+.submenu
+{
+	display: none;
+}
+nav li:hover .submenu
+{
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding: 0px;
+	z-index: 100000;
+	
+}
+.submenu li
+{
+	border-bottom: 1px solid black;
+}
+.submenu li a
+{
+	padding: 15px 10px;
+	font-size: 13px;
+	color: ghostwhite;
+	width: 150px;
+}
+.accueil:hover
+{
+	background-color: dimgray;
+}
+.menu-recherche:hover
+{
+	background-color: dimgray;
+}
+
+.menu-saisie:hover
+{
+	background-color: dimgray;
+}
+.menu-modification:hover
+{
+	background-color: dimgray;
+}
+.menu-recherche .submenu
+{
+	background-color: grey;
+}
+.menu-saisie .submenu
+{
+	background-color: grey;
+}
+.menu-modification .submenu
+{
+	background-color: grey;
+}
+.menu-recherche .submenu li:hover
+{
+	background-color: black;
+}
+.menu-saisie .submenu li:hover
+{
+	background-color: black;
+}
+.menu-modification .submenu li:hover
+{
+	background-color: black;
+}
+
+#saisie
+{
+	float: left;
+}
+
+#map
+{
+	height: 400px;
+	width: 600px;
+} 
+#naissance, #telephone, #loyer
+{
+	text-align: right;
+}
+#fiche
+{
+	text-align: center;
+}
+#adresse
+{
+	width: 350px;
+}
+#nomcommune
+{
+	width: 200px;
+}
+#bouton
+{
+	width: 5px;
+}
+#liberer
+{
+	text-align: center;
+}
+#modifier
+{
+	width: 25px;
+}
+#loyer
+{
+	width: 150px;
+}
+#copyright
+{
+	position: absolute;
+	bottom: 0px;
+}
+#introduction
+{
+	font-size: 18px;
+}
+#projet
+{
+	height: 300px;
+	overflow: auto;
+}
+#imgmcd
+{
+	width: 470px;
+	height: 182px;
+}
+#imgmcd:hover
+{
+	width: 1024px;
+	height: 396px;
+}
+#imgusecase
+{
+	width: 470px;
+	height: 384px;
+}
+#imgusecase:hover
+{
+	width: 1024px;
+	height: 835px;
+}
