@@ -1,0 +1,6 @@
+
+Logement (Num_Logement, Adresse_Logement, Superficie_Logement, Loyer_Logement, Latitude_Logement, Longitude_Logement #Num_Quartier, #Num_Type) 
+Locataire (Num_Locataire, Nom_Locataire, Prenom_Locataire, Naissance_Locataire, Telephone_Locataire, #Num_Logement) 
+TypeLogement (Num_Type, Nom_Type, Charges_Type) 
+Commune (Num_Commune, Nom_Commune, CodePostal_Commune, NbHabitants_Commune) 
+Quartier (Num_Quartier, Nom_Quartier, #Num_Commune) 

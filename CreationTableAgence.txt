@@ -1,0 +1,57 @@
+DROP TABLE IF EXISTS
+    Logement;
+CREATE TABLE Logement(
+    Num_Logement INT AUTO_INCREMENT NOT NULL,
+    Adresse_Logement VARCHAR(60),
+    Superficie_Logement FLOAT,
+    Loyer_Logement FLOAT,
+    Latitude_Logement FLOAT, 
+    Longitude_Logement FLOAT,
+    Num_Quartier INT,
+    Num_Type INT,
+    PRIMARY KEY(Num_Logement)
+) ENGINE = InnoDB;
+DROP TABLE IF EXISTS
+    Locataire;
+CREATE TABLE Locataire(
+    Num_Locataire INT AUTO_INCREMENT NOT NULL,
+    Nom_Locataire VARCHAR(40),
+    Prenom_Locataire VARCHAR(40),
+    Naissance_Locataire DATE,
+    Telephone_Locataire VARCHAR(20),
+    Num_Logement INT,
+    PRIMARY KEY(Num_Locataire)
+) ENGINE = InnoDB;
+DROP TABLE IF EXISTS TYPE
+    ;
+CREATE TABLE TypeLogement(
+    Num_Type INT AUTO_INCREMENT NOT NULL,
+    Nom_Type VARCHAR(12),
+    Charges_Type FLOAT,
+    PRIMARY KEY(Num_Type)
+) ENGINE = InnoDB;
+DROP TABLE IF EXISTS
+    Commune;
+CREATE TABLE Commune(
+    Num_Commune INT AUTO_INCREMENT NOT NULL,
+    Nom_Commune VARCHAR(40),
+    CodePostal_Commune INT,
+    NbHabitants_Commune INT,
+    PRIMARY KEY(Num_Commune)
+) ENGINE = InnoDB;
+DROP TABLE IF EXISTS
+    Quartier;
+CREATE TABLE Quartier(
+    Num_Quartier INT AUTO_INCREMENT NOT NULL,
+    Nom_Quartier VARCHAR(40),
+    Num_Commune INT,
+    PRIMARY KEY(Num_Quartier)
+) ENGINE = InnoDB;
+ALTER TABLE
+    Logement ADD CONSTRAINT FK_Logement_Num_Quartier FOREIGN KEY(Num_Quartier) REFERENCES Quartier(Num_Quartier);
+ALTER TABLE
+    Logement ADD CONSTRAINT FK_Logement_Num_Type FOREIGN KEY(Num_Type) REFERENCES TYPE(Num_Type);
+ALTER TABLE
+    Locataire ADD CONSTRAINT FK_Locataire_Num_Logement FOREIGN KEY(Num_Logement) REFERENCES Logement(Num_Logement);
+ALTER TABLE
+    Quartier ADD CONSTRAINT FK_Quartier_Num_Commune FOREIGN KEY(Num_Commune) REFERENCES Commune(Num_Commune);
